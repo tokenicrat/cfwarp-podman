@@ -29,5 +29,3 @@ jobs:
           tags: |
             ghcr.io/tokenicrat/cfwarp:${{ github.ref_name }}
             ghcr.io/tokenicrat/cfwarp:latest
-          cache-from: type=gha
-          cache-to: type=gha,mode=max
