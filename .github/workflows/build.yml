@@ -3,6 +3,7 @@ name: Build and push Podman image
 on:
   release:
     types: [published]
+  workflow_dispatch:
 
 env:
   REGISTRY_USER: ${{ github.actor }}
@@ -31,7 +32,7 @@ jobs:
           context: .
           containerfiles: ./Containerfile
           image: ${{ env.IMAGE_REGISTRY }}/cfwarp
-          tags: latest,${{ github.event.release.tag_name }}
+          tags: latest ${{ github.event.release.tag_name }}
       
       - name: Push to GHCR
         uses: redhat-actions/push-to-registry@v2
