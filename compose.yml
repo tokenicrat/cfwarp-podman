@@ -8,3 +8,6 @@ services:
     ports:
       - "5000:5000"
       - "5001:5001"
+    # Uncomment the following lines to use your own WARP license key
+    # environment:
+    #   - WARP_LICENSE_KEY=xxx-xxx-xxx

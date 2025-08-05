@@ -1,4 +1,5 @@
-FROM --platform=amd64 alpine:latest
+ARG ARCH=amd64
+FROM ${ARCH}/alpine:latest
 LABEL maintainer="Tokenicrat <hi@bytoken.link>"
 ENV WGCF_VERSION=2.2.27
 ENV WIREPROXY_VERSION=1.0.9

@@ -40,11 +40,9 @@ curl https://www.google.com -x http://localhost:5001 # 假设运行于本地
 curl https://www.google.com -x socks://localhost:5000
 ```
 
-目前尚不支持自定义密钥，未来也许会实现。
+如果您拥有 WARP+ 密钥，请在 Compose 中取消注释并填入。重启容器即可重新生成密钥；IP 由 Cloudflare 分配，无法实现更换。
 
-重启容器即可重新生成密钥；IP 由 Cloudflare 分配，无法实现更换。
-
-CI 正在开发，目前人工更新 Containerfile 中的版本。
+本仓库也许无法长期维护，wgcf 和 wireproxy 版本可能过时。您可以 fork 本仓库，手动修改 `Containerfile` 内版本号生成镜像。
 
 ## 结构
 
