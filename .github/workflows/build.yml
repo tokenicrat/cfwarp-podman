@@ -24,6 +24,12 @@ jobs:
           password: ${{ env.REGISTRY_PASSWORD }}
           registry: ${{ env.IMAGE_REGISTRY }}
     
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+        with:
+          platforms: arm64,amd64
+
+      
       - name: Build image
         id: build_image
         uses: redhat-actions/buildah-build@v2
