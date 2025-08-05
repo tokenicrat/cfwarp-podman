@@ -1,5 +1,3 @@
-#!/bin/sh
-
 /app/wgcf register --accept-tos \
     && echo "   OK   Cloudflare WARP account registered" \
     || (echo " ERROR  Failed to register Cloudflare WARP account"; exit 1)
