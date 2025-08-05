@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  cfwarp:
+    image: ghcr.io/tokenicrat/cfwarp:latest
+    container_name: cfwarp
+    restart: always
+    ports:
+      - "5000:5000"
+      - "5001:5001"
