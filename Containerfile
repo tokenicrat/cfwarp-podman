@@ -1,6 +1,6 @@
 FROM alpine:latest
-LABEL maintainer="Tokenicrat <hi@bytoken.link>"
-ENV WGCF_VERSION=2.2.27
+LABEL maintainer="Tokenicrat <hi@plaintext.stream>"
+ENV WGCF_VERSION=2.2.30
 ENV WIREPROXY_VERSION=1.0.9
 
 COPY ./src/setup.sh ./src/entry.sh ./src/default.conf /app/
