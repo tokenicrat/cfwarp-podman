@@ -10,11 +10,11 @@ Cloudflare WARP 的简易 Podman 封装
 
 - cURL
 - Podman 和 Podman Compose 正确安装并启用
-  - 也可使用 Docker 和 Docker Compose，将命令替换为 `podman`
+  - 也可使用 Docker 和 Docker Compose，将命令替换为 `docker`
 
 ```bash
 curl -O -sSL https://raw.githubusercontent.com/tokenicrat/cfwarp-podman/main/compose.yml
-docker compose up -d
+podman compose up -d
 ```
 
 若不希望使用 Compose，通过命令行启动：
@@ -48,7 +48,7 @@ curl https://www.google.com -x socks://localhost:5000
 
 先通过 [wgcf](https://github.com/ViRb3/wgcf) 获取 Cloudflare WARP 免费版密钥，生成 WireGuard 配置，然后使用 [wireproxy](https://github.com/whyvl/wireproxy) 转换为 SOCKS5 和 HTTP 代理。
 
-Cloudflare WARP 的 CLI 客户端实际上提供了代理模式，但是该客户端存在内存泄漏问题，Cloudflare 也没有解决的计划，因此可用性较差。
+Cloudflare WARP 的 CLI 客户端实际上提供了代理模式，但是一直存在内存泄漏问题，可用性较差。
 
 ## 协议
 
